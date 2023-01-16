@@ -1,8 +1,17 @@
 fn main() {
-    println!("Hello, world!");
-    goodbye();
+    let formal = "Formal: Goodbye.";
+    let casual = "Casual: See you later";
+    goodbye(formal);
+    goodbye(casual);
+
+    let num = 25;
+    println!("{} divided by 5 = {}",num, divide_by_5(num));
 }
 
-fn goodbye() {
-    println!("Goodbye.");
+fn goodbye(message: &str) {
+    println!("\n{}",message);
+}
+
+fn divide_by_5(num:u32) -> u32 {
+    return num/5;
 }
